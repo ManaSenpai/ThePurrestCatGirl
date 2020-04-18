@@ -16,11 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="ThePurrestCatGirl"
+run/main_scene="res://Cenas/Testes.tscn"
 config/icon="res://icon.png"
 
 [display]
 
-window/size/width=1000
+window/size/height=640
 
 [input]
 

@@ -1,6 +1,6 @@
 extends Area2D
 
-var direcao = Vector2(0,-1)
+var direcao = Vector2(1,0)
 var VEL = 400
 var velocidade = 0
 
@@ -30,6 +30,15 @@ func define_direcao(rotacao):
 
 func _on_VisibilityNotifier2D_screen_exited():
 	position = Vector2(500,300)
+	para()
+	pass 
+
+func para():
 	velocidade = 0
 	$TimerRotacao.start()
-	pass 
+
+func _on_Personagem_area_entered(area):
+	if ("Parede" in area.name):
+		para()
+		print(position)
+	

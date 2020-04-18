@@ -1,7 +1,7 @@
 extends Area2D
 
 var direcao = Vector2(1,0)
-var VEL = 400
+var VEL = 800
 var velocidade = 0
 
 func _physics_process(delta):
@@ -35,10 +35,15 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 func para():
 	velocidade = 0
+	var posicao64 = position/64
+	posicao64 = posicao64.round()
+	
+	position = posicao64*64
+	
+	print(position)
 	$TimerRotacao.start()
 
 func _on_Personagem_area_entered(area):
 	if ("Parede" in area.name):
 		para()
-		print(position)
 	

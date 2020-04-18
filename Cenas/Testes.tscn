@@ -8,6 +8,9 @@
 [node name="Personagem" parent="." instance=ExtResource( 1 )]
 position = Vector2( 64, 64 )
 
+[node name="Camera2D" type="Camera2D" parent="Personagem"]
+current = true
+
 [node name="Paredes" type="Node2D" parent="."]
 
 [node name="ParedeTeste" parent="Paredes" instance=ExtResource( 2 )]
@@ -164,3 +167,15 @@ position = Vector2( 0, 128 )
 
 [node name="ParedeTeste52" parent="Paredes" instance=ExtResource( 2 )]
 position = Vector2( 0, 64 )
+
+[node name="ParedeTeste53" parent="Paredes" instance=ExtResource( 2 )]
+position = Vector2( 576, 64 )
+
+[node name="ParedeTeste54" parent="Paredes" instance=ExtResource( 2 )]
+position = Vector2( 512, 576 )
+
+[node name="ParedeTeste55" parent="Paredes" instance=ExtResource( 2 )]
+position = Vector2( 64, 128 )
+
+[node name="ParedeTeste56" parent="Paredes" instance=ExtResource( 2 )]
+position = Vector2( 576, 192 )

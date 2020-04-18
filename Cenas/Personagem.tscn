@@ -19,12 +19,4 @@ texture = ExtResource( 1 )
 shape = SubResource( 1 )
 one_way_collision = true
 one_way_collision_margin = 0.0
-
-[node name="TimerRotacao" type="Timer" parent="."]
-wait_time = 0.5
-autostart = true
-
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 [connection signal="area_entered" from="." to="." method="_on_Personagem_area_entered"]
-[connection signal="timeout" from="TimerRotacao" to="." method="_on_TimerRotacao_timeout"]
-[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

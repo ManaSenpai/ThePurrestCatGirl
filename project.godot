@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="ThePurrestCatGirl"
-run/main_scene="res://Cenas/Testes.tscn"
+run/main_scene="res://Cenas/01.tscn"
 config/icon="res://icon.png"
 
 [display]

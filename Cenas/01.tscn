@@ -1,87 +1,19 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Cenas/Portal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/Personagem.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Cenas/ParedeTeste.tscn" type="PackedScene" id=3]
 
 [node name="01" type="Node2D"]
 
 [node name="Paredes" type="Node2D" parent="."]
-
-[node name="Parede" parent="Paredes" instance=ExtResource( 3 )]
-
-[node name="Parede2" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 64, 0 )
-
-[node name="Parede3" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 128, 0 )
-
-[node name="Parede4" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 192, 0 )
-
-[node name="Parede5" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 256, 0 )
-
-[node name="Parede6" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 320, 0 )
-
-[node name="Parede7" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 384, 0 )
-
-[node name="Parede8" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 384, 64 )
-
-[node name="Parede9" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 384, 128 )
-
-[node name="Parede10" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 384, 192 )
-
-[node name="Parede11" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 384, 256 )
-
-[node name="Parede12" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 320, 256 )
-
-[node name="Parede13" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 256, 256 )
-
-[node name="Parede14" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 192, 256 )
-
-[node name="Parede15" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 128, 256 )
-
-[node name="Parede16" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 64, 256 )
-
-[node name="Parede17" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 0, 256 )
-
-[node name="Parede18" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 0, 192 )
-
-[node name="Parede19" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 0, 128 )
-
-[node name="Parede20" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 0, 64 )
-
-[node name="Parede21" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 64, 128 )
-
-[node name="Parede22" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 128, 128 )
-
-[node name="Parede23" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 192, 128 )
-
-[node name="Parede24" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 256, 128 )
-
-[node name="Portal" parent="." instance=ExtResource( 1 )]
-position = Vector2( 64, 192 )
-caminho = "res://Cenas/Testes.tscn"
+scale = Vector2( 1, -1 )
 
 [node name="Personagem" parent="." instance=ExtResource( 2 )]
 position = Vector2( 64, 64 )
+
+[node name="Portal" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 192 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 192, 128 )
+current = true

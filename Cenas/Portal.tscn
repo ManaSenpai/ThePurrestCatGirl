@@ -30,6 +30,7 @@ __meta__ = {
 }
 
 [node name="Sprite" type="Sprite" parent="."]
+visible = false
 modulate = Color( 1, 0.984375, 0, 1 )
 self_modulate = Color( 1, 0.960784, 0, 1 )
 texture = ExtResource( 1 )

@@ -1,6 +1,6 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://Cenas/Portal.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Cenas/Camera.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/Personagem.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Cenas/Paredes/Parede5.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Cenas/Paredes/Parede3.tscn" type="PackedScene" id=4]
@@ -10,103 +10,234 @@
 [ext_resource path="res://Cenas/Paredes/Parede2.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Cenas/Paredes/Parede6.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Cenas/Paredes/Parede7.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Cenas/Inimigo.tscn" type="PackedScene" id=11]
 
 [node name="01" type="Node2D"]
 
+[node name="Inimigo" parent="." instance=ExtResource( 11 )]
+position = Vector2( -320, 448 )
+rotation = 1.5708
+
 [node name="Paredes" type="Node2D" parent="."]
 
-[node name="Parede1" parent="Paredes" instance=ExtResource( 6 )]
+[node name="Parede33" parent="Paredes" instance=ExtResource( 6 )]
+position = Vector2( 384, 512 )
+
+[node name="Parede72" parent="Paredes" instance=ExtResource( 6 )]
+position = Vector2( -256, 512 )
 
 [node name="Parede2" parent="Paredes" instance=ExtResource( 8 )]
-position = Vector2( 64, 0 )
-
-[node name="Parede3" parent="Paredes" instance=ExtResource( 8 )]
-position = Vector2( 128, 0 )
-
-[node name="Parede4" parent="Paredes" instance=ExtResource( 8 )]
-position = Vector2( 192, 0 )
-
-[node name="Parede5" parent="Paredes" instance=ExtResource( 8 )]
-position = Vector2( 256, 0 )
-
-[node name="Parede6" parent="Paredes" instance=ExtResource( 8 )]
-position = Vector2( 320, 0 )
-
-[node name="Parede7" parent="Paredes" instance=ExtResource( 8 )]
-position = Vector2( 544, 0 )
-
-[node name="Parede8" parent="Paredes" instance=ExtResource( 4 )]
-position = Vector2( 384, 0 )
-
-[node name="Parede9" parent="Paredes" instance=ExtResource( 7 )]
-position = Vector2( 0, 64 )
-
-[node name="Parede10" parent="Paredes" instance=ExtResource( 7 )]
-position = Vector2( 0, 128 )
-
-[node name="Parede11" parent="Paredes" instance=ExtResource( 7 )]
-position = Vector2( 0, 192 )
-
-[node name="Parede12" parent="Paredes" instance=ExtResource( 7 )]
-position = Vector2( 512, 288 )
-
-[node name="Parede13" parent="Paredes" instance=ExtResource( 9 )]
-position = Vector2( 0, 256 )
-
-[node name="Parede14" parent="Paredes" instance=ExtResource( 10 )]
-position = Vector2( 64, 256 )
-
-[node name="Parede15" parent="Paredes" instance=ExtResource( 10 )]
-position = Vector2( 128, 256 )
-
-[node name="Parede16" parent="Paredes" instance=ExtResource( 10 )]
-position = Vector2( 192, 256 )
-
-[node name="Parede17" parent="Paredes" instance=ExtResource( 10 )]
-position = Vector2( 256, 256 )
-
-[node name="Parede18" parent="Paredes" instance=ExtResource( 10 )]
-position = Vector2( 320, 256 )
-
-[node name="Parede19" parent="Paredes" instance=ExtResource( 10 )]
-position = Vector2( 544, 192 )
-
-[node name="Parede20" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 384, 192 )
-
-[node name="Parede21" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 384, 128 )
-
-[node name="Parede22" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 384, 64 )
-
-[node name="Parede23" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 544, 96 )
-
-[node name="Parede24" parent="Paredes" instance=ExtResource( 8 )]
-position = Vector2( 64, 128 )
-
-[node name="Parede25" parent="Paredes" instance=ExtResource( 8 )]
-position = Vector2( 128, 128 )
-
-[node name="Parede26" parent="Paredes" instance=ExtResource( 8 )]
 position = Vector2( 192, 128 )
 
-[node name="Parede27" parent="Paredes" instance=ExtResource( 8 )]
+[node name="Parede3" parent="Paredes" instance=ExtResource( 8 )]
+position = Vector2( 128, 128 )
+
+[node name="Parede4" parent="Paredes" instance=ExtResource( 8 )]
+position = Vector2( 64, 128 )
+
+[node name="Parede31" parent="Paredes" instance=ExtResource( 8 )]
+position = Vector2( 192, 512 )
+
+[node name="Parede35" parent="Paredes" instance=ExtResource( 8 )]
+position = Vector2( 128, 512 )
+
+[node name="Parede36" parent="Paredes" instance=ExtResource( 8 )]
+position = Vector2( 64, 512 )
+
+[node name="Parede37" parent="Paredes" instance=ExtResource( 8 )]
+position = Vector2( 0, 512 )
+
+[node name="Parede69" parent="Paredes" instance=ExtResource( 8 )]
+position = Vector2( -64, 512 )
+
+[node name="Parede70" parent="Paredes" instance=ExtResource( 8 )]
+position = Vector2( -128, 512 )
+
+[node name="Parede71" parent="Paredes" instance=ExtResource( 8 )]
+position = Vector2( -192, 512 )
+
+[node name="Parede34" parent="Paredes" instance=ExtResource( 4 )]
+position = Vector2( 256, 512 )
+
+[node name="Parede45" parent="Paredes" instance=ExtResource( 4 )]
+position = Vector2( 512, 512 )
+
+[node name="Parede10" parent="Paredes" instance=ExtResource( 4 )]
 position = Vector2( 256, 128 )
 
-[node name="Parede28" parent="Paredes" instance=ExtResource( 8 )]
-position = Vector2( 608, 256 )
+[node name="Parede9" parent="Paredes" instance=ExtResource( 7 )]
+position = Vector2( 384, 128 )
+
+[node name="Parede20" parent="Paredes" instance=ExtResource( 7 )]
+position = Vector2( 384, 64 )
+
+[node name="Parede11" parent="Paredes" instance=ExtResource( 7 )]
+position = Vector2( 384, 192 )
+
+[node name="Parede13" parent="Paredes" instance=ExtResource( 7 )]
+position = Vector2( 384, 256 )
+
+[node name="Parede18" parent="Paredes" instance=ExtResource( 7 )]
+position = Vector2( 384, 320 )
+
+[node name="Parede12" parent="Paredes" instance=ExtResource( 7 )]
+position = Vector2( 640, 448 )
+
+[node name="Parede50" parent="Paredes" instance=ExtResource( 7 )]
+position = Vector2( 640, 512 )
+
+[node name="Parede51" parent="Paredes" instance=ExtResource( 7 )]
+position = Vector2( 640, 576 )
+
+[node name="Parede52" parent="Paredes" instance=ExtResource( 7 )]
+position = Vector2( 640, 640 )
+
+[node name="Parede53" parent="Paredes" instance=ExtResource( 7 )]
+position = Vector2( 640, 704 )
+
+[node name="Parede49" parent="Paredes" instance=ExtResource( 7 )]
+position = Vector2( 384, 576 )
+
+[node name="Parede77" parent="Paredes" instance=ExtResource( 7 )]
+position = Vector2( -256, 576 )
+
+[node name="Parede78" parent="Paredes" instance=ExtResource( 7 )]
+position = Vector2( -256, 640 )
+
+[node name="Parede29" parent="Paredes" instance=ExtResource( 9 )]
+position = Vector2( 384, 384 )
+
+[node name="Parede44" parent="Paredes" instance=ExtResource( 9 )]
+position = Vector2( 384, 640 )
+
+[node name="Parede21" parent="Paredes" instance=ExtResource( 10 )]
+position = Vector2( 320, 0 )
+
+[node name="Parede25" parent="Paredes" instance=ExtResource( 10 )]
+position = Vector2( 256, 0 )
+
+[node name="Parede26" parent="Paredes" instance=ExtResource( 10 )]
+position = Vector2( 192, 0 )
+
+[node name="Parede27" parent="Paredes" instance=ExtResource( 10 )]
+position = Vector2( 128, 0 )
+
+[node name="Parede59" parent="Paredes" instance=ExtResource( 10 )]
+position = Vector2( 64, 0 )
+
+[node name="Parede46" parent="Paredes" instance=ExtResource( 10 )]
+position = Vector2( 448, 640 )
+
+[node name="Parede47" parent="Paredes" instance=ExtResource( 10 )]
+position = Vector2( 448, 384 )
+
+[node name="Parede38" parent="Paredes" instance=ExtResource( 10 )]
+position = Vector2( 192, 384 )
+
+[node name="Parede39" parent="Paredes" instance=ExtResource( 10 )]
+position = Vector2( 128, 384 )
+
+[node name="Parede40" parent="Paredes" instance=ExtResource( 10 )]
+position = Vector2( 64, 384 )
+
+[node name="Parede41" parent="Paredes" instance=ExtResource( 10 )]
+position = Vector2( 0, 384 )
+
+[node name="Parede42" parent="Paredes" instance=ExtResource( 10 )]
+position = Vector2( -64, 384 )
+
+[node name="Parede65" parent="Paredes" instance=ExtResource( 10 )]
+position = Vector2( -128, 384 )
+
+[node name="Parede66" parent="Paredes" instance=ExtResource( 10 )]
+position = Vector2( -192, 384 )
+
+[node name="Parede67" parent="Paredes" instance=ExtResource( 10 )]
+position = Vector2( -256, 384 )
+
+[node name="Parede68" parent="Paredes" instance=ExtResource( 10 )]
+position = Vector2( -320, 384 )
+
+[node name="Parede17" parent="Paredes" instance=ExtResource( 10 )]
+position = Vector2( 512, 384 )
+
+[node name="Parede28" parent="Paredes" instance=ExtResource( 10 )]
+position = Vector2( 576, 384 )
+
+[node name="Parede19" parent="Paredes" instance=ExtResource( 10 )]
+position = Vector2( 608, 192 )
+
+[node name="Parede43" parent="Paredes" instance=ExtResource( 3 )]
+position = Vector2( 512, 576 )
+
+[node name="Parede62" parent="Paredes" instance=ExtResource( 3 )]
+position = Vector2( 256, 576 )
+
+[node name="Parede73" parent="Paredes" instance=ExtResource( 3 )]
+position = Vector2( -384, 448 )
+
+[node name="Parede74" parent="Paredes" instance=ExtResource( 3 )]
+position = Vector2( -384, 512 )
+
+[node name="Parede75" parent="Paredes" instance=ExtResource( 3 )]
+position = Vector2( -384, 576 )
+
+[node name="Parede76" parent="Paredes" instance=ExtResource( 3 )]
+position = Vector2( -384, 640 )
+
+[node name="Parede63" parent="Paredes" instance=ExtResource( 3 )]
+position = Vector2( 256, 640 )
+
+[node name="Parede64" parent="Paredes" instance=ExtResource( 3 )]
+position = Vector2( 256, 704 )
+
+[node name="Parede22" parent="Paredes" instance=ExtResource( 3 )]
+position = Vector2( 0, 64 )
+
+[node name="Parede23" parent="Paredes" instance=ExtResource( 3 )]
+position = Vector2( 256, 192 )
+
+[node name="Parede60" parent="Paredes" instance=ExtResource( 3 )]
+position = Vector2( 256, 256 )
+
+[node name="Parede61" parent="Paredes" instance=ExtResource( 3 )]
+position = Vector2( 256, 320 )
+
+[node name="Parede48" parent="Paredes" instance=ExtResource( 8 )]
+position = Vector2( 448, 512 )
+
+[node name="Parede54" parent="Paredes" instance=ExtResource( 8 )]
+position = Vector2( 576, 768 )
+
+[node name="Parede55" parent="Paredes" instance=ExtResource( 8 )]
+position = Vector2( 512, 768 )
+
+[node name="Parede56" parent="Paredes" instance=ExtResource( 8 )]
+position = Vector2( 448, 768 )
+
+[node name="Parede57" parent="Paredes" instance=ExtResource( 8 )]
+position = Vector2( 384, 768 )
+
+[node name="Parede58" parent="Paredes" instance=ExtResource( 8 )]
+position = Vector2( 320, 768 )
+
+[node name="Parede8" parent="Paredes" instance=ExtResource( 5 )]
+position = Vector2( 256, 384 )
+
+[node name="Parede14" parent="Paredes" instance=ExtResource( 5 )]
+position = Vector2( 512, 640 )
 
 [node name="Personagem" parent="." instance=ExtResource( 2 )]
 position = Vector2( 64, 64 )
 
-[node name="Portal" parent="." instance=ExtResource( 1 )]
-position = Vector2( 64, 192 )
+[node name="Cameras" type="Node2D" parent="."]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera" parent="Cameras" instance=ExtResource( 1 )]
 position = Vector2( 192, 128 )
-current = true
+inicial = true
 
-[node name="Parede8" parent="." instance=ExtResource( 5 )]
-position = Vector2( 384, 256 )
+[node name="Camera2" parent="Cameras" instance=ExtResource( 1 )]
+position = Vector2( 448, 576 )
+
+[node name="Camera3" parent="Cameras" instance=ExtResource( 1 )]
+position = Vector2( -128, 480 )

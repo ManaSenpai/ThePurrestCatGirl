@@ -6,7 +6,7 @@ var direcao = Vector2(1,0)
 var VEL = 300
 # Variável responsável por dar o movimento ao jogador 
 var velocidade = 0
-
+const CAMINHOCENAS = "res://Cenas/"
 
 func _physics_process(delta):
 	
@@ -72,6 +72,8 @@ func _on_Personagem_area_entered(area):
 	# Se um objeto parede entrar em contato com ele, ele para
 	if ("Parede" in area.name):
 		para()
+	if ("Ataque" in area.name):
+		get_tree().change_scene(CAMINHOCENAS + get_tree().get_current_scene().get_name()+".tscn")
 
 
 func _on_AnimatedSprite_animation_finished():

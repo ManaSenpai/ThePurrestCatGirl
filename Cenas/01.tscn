@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Cenas/Camera.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/Personagem.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Cenas/Paredes/Parede6.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Cenas/Paredes/Parede7.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Cenas/Inimigo.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Cenas/Armadilhas/Armadilha1.tscn" type="PackedScene" id=12]
 
 [node name="01" type="Node2D"]
 
@@ -241,3 +242,9 @@ position = Vector2( 448, 576 )
 
 [node name="Camera3" parent="Cameras" instance=ExtResource( 1 )]
 position = Vector2( -128, 480 )
+
+[node name="Armadilha1" parent="." instance=ExtResource( 12 )]
+position = Vector2( -192, 448 )
+
+[node name="PosicaoInicial" type="Position2D" parent="."]
+position = Vector2( 64, 64 )

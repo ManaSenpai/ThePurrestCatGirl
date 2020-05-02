@@ -49,14 +49,15 @@ __meta__ = {
 Mensagem = ExtResource( 19 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 3.14159
 shape = SubResource( 1 )
 one_way_collision = true
 one_way_collision_margin = 0.0
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
-animation = "slide_loop"
-frame = 2
+animation = "idle"
+frame = 5
 playing = true
 [connection signal="area_entered" from="." to="." method="_on_Personagem_area_entered"]
 [connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]

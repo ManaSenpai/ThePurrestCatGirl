@@ -1,7 +1,7 @@
 extends Area2D
 
 # Variável responsável por dar a direção dos movimentos do jogador
-var direcao = Vector2(1,0)
+var direcao
 
 # Constante de velocidade
 var VEL = 300
@@ -15,10 +15,16 @@ var velocidade = 0
 # Variável com a contagem de voltas que o jogador pode fazer ao apertar espaço.
 var volta_numero = 0
 
+export var tutorial = false
+export var direcao_inicial = 0
+export var inverte = false
 export (PackedScene) var Mensagem
 
 func _ready():
-	criaMensagem("Você pode se movimentar com as setas")
+	if (tutorial):
+		criaMensagem("Você pode se movimentar com as setas")
+	muda_direcao(direcao_inicial)
+	$AnimatedSprite.flip_h = inverte
 
 func _physics_process(delta):	
 	# Se ele estiver parado, ele pode se mover
@@ -55,7 +61,6 @@ func _physics_process(delta):
 		
 		# Muda a direção para o contrário
 		muda_direcao (oposto)
-	
 	# Formula para movimentar o personagem, baseado no 
 	# delta, na direção e na velocidade. 
 	position += direcao.normalized() * delta * velocidade
@@ -81,7 +86,6 @@ func muda_direcao(rotacao):
 		Vector2(0,1),
 		Vector2(-1,0)
 	]
-	
 	# Muda a rotação do objeto
 	# Está apontando para o Collider, porque ele é o único que rotaciona
 	$CollisionShape2D.rotation_degrees = rotacao
@@ -94,7 +98,6 @@ func muda_direcao(rotacao):
 
 # Função que faz o personagem parar nos objetos
 func para():
-	
 	# Quando ele para, ele ganha uma volta.
 	volta_numero = 1
 	
@@ -111,8 +114,8 @@ func para():
 
 func reinicia ():
 	position = get_parent().get_node("PosicaoInicial").position
-	muda_direcao(90)
-	para()
+	muda_direcao(direcao_inicial)
+
 
 
 func criaMensagem(var mensagem):

@@ -1,7 +1,6 @@
 extends Area2D
 # Variável para armazenar o caminho da cena para a qual esse portal vai mandar
 export var caminho = "caminho aqui"
-
 func _ready():
 	pass
 	

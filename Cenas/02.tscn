@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Cenas/Personagem.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/Paredes/Parede5.tscn" type="PackedScene" id=2]
@@ -10,11 +10,14 @@
 [ext_resource path="res://Cenas/Armadilhas/PisoFino.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Cenas/Paredes/Parede3.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Cenas/Armadilhas/ParedeArmadilha.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Cenas/Inimigo.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Cenas/Portal.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Cenas/Paredes/Parede8.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Cenas/Roteiros/02.gd" type="Script" id=14]
+[ext_resource path="res://Cenas/Ativador.tscn" type="PackedScene" id=15]
 
 [node name="02" type="Node2D"]
-
-[node name="ParedeArmadilha" parent="." instance=ExtResource( 10 )]
-position = Vector2( 384, 576 )
+script = ExtResource( 14 )
 
 [node name="Personagem" parent="." instance=ExtResource( 1 )]
 position = Vector2( 0, 32 )
@@ -83,9 +86,6 @@ position = Vector2( -64, 256 )
 [node name="Parede47" parent="Paredes" instance=ExtResource( 2 )]
 position = Vector2( 0, 640 )
 
-[node name="Parede48" parent="Paredes" instance=ExtResource( 2 )]
-position = Vector2( 0, 576 )
-
 [node name="Parede49" parent="Paredes" instance=ExtResource( 2 )]
 position = Vector2( 0, 384 )
 
@@ -106,6 +106,30 @@ position = Vector2( 320, 192 )
 
 [node name="Parede24" parent="Paredes" instance=ExtResource( 6 )]
 position = Vector2( 384, 192 )
+
+[node name="Parede57" parent="Paredes" instance=ExtResource( 6 )]
+position = Vector2( -64, 448 )
+
+[node name="Parede58" parent="Paredes" instance=ExtResource( 6 )]
+position = Vector2( -128, 448 )
+
+[node name="Parede59" parent="Paredes" instance=ExtResource( 6 )]
+position = Vector2( -192, 448 )
+
+[node name="Parede60" parent="Paredes" instance=ExtResource( 6 )]
+position = Vector2( -256, 448 )
+
+[node name="Parede61" parent="Paredes" instance=ExtResource( 6 )]
+position = Vector2( -320, 448 )
+
+[node name="Parede62" parent="Paredes" instance=ExtResource( 6 )]
+position = Vector2( -384, 448 )
+
+[node name="Parede63" parent="Paredes" instance=ExtResource( 6 )]
+position = Vector2( -448, 448 )
+
+[node name="Parede64" parent="Paredes" instance=ExtResource( 6 )]
+position = Vector2( -512, 448 )
 
 [node name="Parede27" parent="Paredes" instance=ExtResource( 6 )]
 position = Vector2( 448, 192 )
@@ -167,32 +191,35 @@ position = Vector2( 320, 320 )
 [node name="Parede25" parent="Paredes" instance=ExtResource( 4 )]
 position = Vector2( 384, 320 )
 
-[node name="PisoFino" parent="." instance=ExtResource( 8 )]
-position = Vector2( 64, 256 )
+[node name="Parede48" parent="Paredes" instance=ExtResource( 4 )]
+position = Vector2( -64, 576 )
 
-[node name="PisoFino2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 128, 256 )
+[node name="Parede52" parent="Paredes" instance=ExtResource( 4 )]
+position = Vector2( -128, 576 )
 
-[node name="PisoFino3" parent="." instance=ExtResource( 8 )]
-position = Vector2( 192, 256 )
+[node name="Parede53" parent="Paredes" instance=ExtResource( 4 )]
+position = Vector2( -192, 576 )
 
-[node name="PisoFino4" parent="." instance=ExtResource( 8 )]
-position = Vector2( 256, 256 )
+[node name="Parede54" parent="Paredes" instance=ExtResource( 4 )]
+position = Vector2( -256, 576 )
 
-[node name="PisoFino5" parent="." instance=ExtResource( 8 )]
-position = Vector2( 448, 640 )
+[node name="Parede55" parent="Paredes" instance=ExtResource( 4 )]
+position = Vector2( -320, 576 )
 
-[node name="PisoFino6" parent="." instance=ExtResource( 8 )]
-position = Vector2( 384, 640 )
+[node name="Parede56" parent="Paredes" instance=ExtResource( 4 )]
+position = Vector2( -384, 576 )
 
-[node name="PisoFino7" parent="." instance=ExtResource( 8 )]
-position = Vector2( 320, 640 )
+[node name="Parede65" parent="Paredes" instance=ExtResource( 4 )]
+position = Vector2( -448, 576 )
 
-[node name="PisoFino16" parent="." instance=ExtResource( 8 )]
-position = Vector2( 192, 384 )
+[node name="Parede66" parent="Paredes" instance=ExtResource( 4 )]
+position = Vector2( -512, 576 )
 
-[node name="PisoFino17" parent="." instance=ExtResource( 8 )]
-position = Vector2( 256, 384 )
+[node name="Parede50" parent="Paredes" instance=ExtResource( 9 )]
+position = Vector2( 448, 320 )
+
+[node name="Parede51" parent="Paredes" instance=ExtResource( 9 )]
+position = Vector2( 0, 576 )
 
 [node name="Cameras" type="Node2D" parent="."]
 
@@ -204,6 +231,10 @@ inicial = true
 position = Vector2( 192, 512 )
 inicial = true
 
+[node name="Camera5" parent="Cameras" instance=ExtResource( 5 )]
+position = Vector2( -224, 512 )
+inicial = true
+
 [node name="Camera3" parent="Cameras" instance=ExtResource( 5 )]
 position = Vector2( 640, 384 )
 inicial = true
@@ -212,5 +243,68 @@ inicial = true
 position = Vector2( 640, 512 )
 inicial = true
 
-[node name="Parede3" parent="." instance=ExtResource( 9 )]
-position = Vector2( 448, 320 )
+[node name="PisosFinos" type="Node2D" parent="."]
+
+[node name="PisoFino" parent="PisosFinos" instance=ExtResource( 8 )]
+position = Vector2( 64, 256 )
+
+[node name="PisoFino2" parent="PisosFinos" instance=ExtResource( 8 )]
+position = Vector2( 128, 256 )
+
+[node name="PisoFino3" parent="PisosFinos" instance=ExtResource( 8 )]
+position = Vector2( 192, 256 )
+
+[node name="PisoFino4" parent="PisosFinos" instance=ExtResource( 8 )]
+position = Vector2( 256, 256 )
+
+[node name="PisoFino8" parent="PisosFinos" instance=ExtResource( 8 )]
+position = Vector2( -64, 512 )
+
+[node name="PisoFino5" parent="PisosFinos" instance=ExtResource( 8 )]
+position = Vector2( 448, 640 )
+
+[node name="PisoFino6" parent="PisosFinos" instance=ExtResource( 8 )]
+position = Vector2( 384, 640 )
+
+[node name="PisoFino7" parent="PisosFinos" instance=ExtResource( 8 )]
+position = Vector2( 320, 640 )
+
+[node name="PisoFino16" parent="PisosFinos" instance=ExtResource( 8 )]
+position = Vector2( 192, 384 )
+
+[node name="PisoFino17" parent="PisosFinos" instance=ExtResource( 8 )]
+position = Vector2( 256, 384 )
+
+[node name="Inimigo" parent="." instance=ExtResource( 11 )]
+position = Vector2( -384, 512 )
+
+[node name="Parede8" parent="." instance=ExtResource( 13 )]
+position = Vector2( 0, 448 )
+
+[node name="Portal" parent="." instance=ExtResource( 12 )]
+position = Vector2( -512, 512 )
+caminho = "res://Cenas/01.tscn"
+
+[node name="PosicaoInicial" type="Position2D" parent="."]
+position = Vector2( 0, 32 )
+
+[node name="ParedesQueDesaparecem" type="Node2D" parent="."]
+position = Vector2( -192, 512 )
+
+[node name="ParedeArmadilha" parent="ParedesQueDesaparecem" instance=ExtResource( 10 )]
+position = Vector2( 576, 64 )
+
+[node name="ParedeArmadilha2" parent="ParedesQueDesaparecem" instance=ExtResource( 10 )]
+position = Vector2( 64, 0 )
+desativada = true
+
+[node name="Ativadores" type="Node2D" parent="."]
+
+[node name="Ativador" parent="Ativadores" instance=ExtResource( 15 )]
+position = Vector2( 384, 448 )
+nome_objeto = "ParedesQueDesaparecem/ParedeArmadilha"
+
+[node name="Ativador2" parent="Ativadores" instance=ExtResource( 15 )]
+position = Vector2( -256, 512 )
+nome_objeto = "ParedesQueDesaparecem/ParedeArmadilha2"
+[connection signal="estou_morto" from="Personagem" to="." method="_on_Personagem_estou_morto"]

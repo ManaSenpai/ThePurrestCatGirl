@@ -1,5 +1,6 @@
 extends Area2D
 
+signal estou_morto
 # Variável responsável por dar a direção dos movimentos do jogador
 var direcao
 
@@ -113,8 +114,8 @@ func para():
 
 
 func reinicia ():
-	position = get_parent().get_node("PosicaoInicial").position
-	muda_direcao(direcao_inicial)
+
+	emit_signal("estou_morto")
 
 
 
@@ -143,3 +144,8 @@ func _on_AnimatedSprite_animation_finished():
 	# outra que fica movimentando o personagem.
 	if ($AnimatedSprite.animation == "slide"):
 		$AnimatedSprite.animation = "slide_loop"
+
+func _volta_para_o_comeco():
+	
+	position = get_parent().get_node("PosicaoInicial").position
+	muda_direcao(direcao_inicial)

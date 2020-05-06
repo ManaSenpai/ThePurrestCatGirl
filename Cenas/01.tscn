@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Cenas/Camera.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/Personagem.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Cenas/Armadilhas/Armadilha1.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Cenas/Portal.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Cenas/Roteiros/01.gd" type="Script" id=14]
+[ext_resource path="res://Cenas/PlanoDeFundo.tscn" type="PackedScene" id=15]
 
 [node name="01" type="Node2D"]
 script = ExtResource( 14 )
@@ -256,4 +257,6 @@ position = Vector2( 64, 64 )
 [node name="Portal" parent="." instance=ExtResource( 13 )]
 position = Vector2( -320, 640 )
 caminho = "res://Cenas/02.tscn"
+
+[node name="PlanoDeFundo" parent="." instance=ExtResource( 15 )]
 [connection signal="estou_morto" from="Personagem" to="." method="_on_Personagem_estou_morto"]

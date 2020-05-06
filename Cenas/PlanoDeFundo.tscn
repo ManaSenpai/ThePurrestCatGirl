@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Sprites/Tilesets/background.png" type="Texture" id=1]
+
+[node name="PlanoDeFundo" type="Sprite"]
+modulate = Color( 0.329412, 0.152941, 0.615686, 1 )
+show_behind_parent = true
+position = Vector2( 192, 352 )
+scale = Vector2( 25.4, 25.4 )
+texture = ExtResource( 1 )

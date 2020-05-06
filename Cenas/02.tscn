@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Cenas/Personagem.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/Paredes/Parede5.tscn" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Cenas/Paredes/Parede8.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Cenas/Roteiros/02.gd" type="Script" id=14]
 [ext_resource path="res://Cenas/Ativador.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Cenas/PlanoDeFundo.tscn" type="PackedScene" id=16]
 
 [node name="02" type="Node2D"]
 script = ExtResource( 14 )
@@ -76,9 +77,6 @@ position = Vector2( 448, 448 )
 
 [node name="Parede38" parent="Paredes" instance=ExtResource( 2 )]
 position = Vector2( 448, 512 )
-
-[node name="Parede39" parent="Paredes" instance=ExtResource( 2 )]
-position = Vector2( 448, 576 )
 
 [node name="Parede12" parent="Paredes" instance=ExtResource( 2 )]
 position = Vector2( -64, 256 )
@@ -221,6 +219,12 @@ position = Vector2( 448, 320 )
 [node name="Parede51" parent="Paredes" instance=ExtResource( 9 )]
 position = Vector2( 0, 576 )
 
+[node name="Parede39" parent="Paredes" instance=ExtResource( 13 )]
+position = Vector2( 0, 448 )
+
+[node name="Parede67" parent="Paredes" instance=ExtResource( 13 )]
+position = Vector2( 448, 576 )
+
 [node name="Cameras" type="Node2D" parent="."]
 
 [node name="Camera" parent="Cameras" instance=ExtResource( 5 )]
@@ -278,9 +282,6 @@ position = Vector2( 256, 384 )
 [node name="Inimigo" parent="." instance=ExtResource( 11 )]
 position = Vector2( -384, 512 )
 
-[node name="Parede8" parent="." instance=ExtResource( 13 )]
-position = Vector2( 0, 448 )
-
 [node name="Portal" parent="." instance=ExtResource( 12 )]
 position = Vector2( -512, 512 )
 caminho = "res://Cenas/01.tscn"
@@ -296,7 +297,7 @@ position = Vector2( 576, 64 )
 
 [node name="ParedeArmadilha2" parent="ParedesQueDesaparecem" instance=ExtResource( 10 )]
 position = Vector2( 64, 0 )
-desativada = true
+ativo = false
 
 [node name="Ativadores" type="Node2D" parent="."]
 
@@ -307,4 +308,6 @@ nome_objeto = "ParedesQueDesaparecem/ParedeArmadilha"
 [node name="Ativador2" parent="Ativadores" instance=ExtResource( 15 )]
 position = Vector2( -256, 512 )
 nome_objeto = "ParedesQueDesaparecem/ParedeArmadilha2"
+
+[node name="PlanoDeFundo" parent="." instance=ExtResource( 16 )]
 [connection signal="estou_morto" from="Personagem" to="." method="_on_Personagem_estou_morto"]

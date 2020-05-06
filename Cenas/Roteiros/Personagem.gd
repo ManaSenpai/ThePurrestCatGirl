@@ -16,15 +16,27 @@ var velocidade = 0
 # Variável com a contagem de voltas que o jogador pode fazer ao apertar espaço.
 var volta_numero = 0
 
+# Verifica se estamos num tutorial
 export var tutorial = false
+
+# Representa a direção que ele vai iniciar
 export var direcao_inicial = 0
+
+# Representa se a Sprite está invertida
 export var inverte = false
+
+# Objeto de Mensagens
 export (PackedScene) var Mensagem
 
 func _ready():
+	
+	# Se for um tutorial, crie essa mensagem
 	if (tutorial):
 		criaMensagem("Você pode se movimentar com as setas")
+	
+	# Atribui a direção
 	muda_direcao(direcao_inicial)
+	# E dá a direção para a Sprite conforme desejado
 	$AnimatedSprite.flip_h = inverte
 
 func _physics_process(delta):	
@@ -113,19 +125,25 @@ func para():
 	position = (position/64).round() * 64
 
 
+# Função que envia um sinal de morte do jogador
 func reinicia ():
-
 	emit_signal("estou_morto")
 
 
-
+# Função que cria a mensagem
 func criaMensagem(var mensagem):
-	
+	# Instancia o objeto de mensagem
 	var objeto = Mensagem.instance()
+	
+	# Atribui ele como filho
 	add_child(objeto)
+	
+	# Coloca numa posição legal
 	objeto.rect_global_position = position + Vector2(64,-64)
+	
+	# E dá a mensagem que foi passada como parametro nela
 	objeto.text = mensagem
-	return mensagem
+	
 	
 
 func _on_Personagem_area_entered(area):
@@ -145,6 +163,7 @@ func _on_AnimatedSprite_animation_finished():
 	if ($AnimatedSprite.animation == "slide"):
 		$AnimatedSprite.animation = "slide_loop"
 
+# Função que reinicia o personagem e volta ele para a posição inicial
 func _volta_para_o_comeco():
 	
 	position = get_parent().get_node("PosicaoInicial").position

@@ -1,14 +1,21 @@
 extends Area2D
-export var desativada = false
+export var ativo = true
 
-func _ready():
-	$CollisionShape2D.disabled = desativada
-	$Sprite.visible = !desativada
 
-func _on_Timer_timeout():
-	inverte()
+func _process(delta):
+	# Se tiver atualizado o valor, inverta tudo.
+	# Eu coloquei assim, porque estava sendo exibido um erro ao 
+	# tentar inverter o Monitorable de um objeto durante um Area_Entered,
+	# então pensei em deixar dentro de um Process mesmo.
+	# Espero que não consuma muito processamento
+	if (monitorable != ativo):
+		visible = ativo
+		monitorable = ativo
+		$ParedeInterior.visible = ativo
+		$ParedeInterior.monitorable = ativo
 	
 
-func inverte():
-	$Sprite.visible = !$Sprite.visible
-	$CollisionShape2D.disabled = !$Sprite.visible  
+func _on_Timer_timeout():
+	ativo = !ativo
+	
+

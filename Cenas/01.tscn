@@ -19,11 +19,14 @@
 [node name="01" type="Node2D"]
 script = ExtResource( 14 )
 
+[node name="PlanoDeFundo" parent="." instance=ExtResource( 15 )]
+
 [node name="Inimigo" parent="." instance=ExtResource( 11 )]
 position = Vector2( -320, 448 )
 rotation = 1.5708
 
 [node name="Paredes" type="Node2D" parent="."]
+show_behind_parent = true
 
 [node name="Parede33" parent="Paredes" instance=ExtResource( 6 )]
 position = Vector2( 384, 512 )
@@ -233,6 +236,7 @@ position = Vector2( 256, 384 )
 position = Vector2( 512, 640 )
 
 [node name="Personagem" parent="." instance=ExtResource( 2 )]
+light_mask = 524290
 position = Vector2( 64, 64 )
 tutorial = true
 
@@ -257,6 +261,4 @@ position = Vector2( 64, 64 )
 [node name="Portal" parent="." instance=ExtResource( 13 )]
 position = Vector2( -320, 640 )
 caminho = "res://Cenas/02.tscn"
-
-[node name="PlanoDeFundo" parent="." instance=ExtResource( 15 )]
 [connection signal="estou_morto" from="Personagem" to="." method="_on_Personagem_estou_morto"]

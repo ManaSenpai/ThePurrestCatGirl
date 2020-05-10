@@ -137,7 +137,7 @@ func criaMensagem(var mensagem):
 	
 	# Atribui ele como filho
 	add_child(objeto)
-	
+	objeto.get_node("AnimationPlayer").play("Aparece")
 	# Coloca numa posição legal
 	objeto.rect_global_position = position + Vector2(64,-64)
 	

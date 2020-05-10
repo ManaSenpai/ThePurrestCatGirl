@@ -4,7 +4,6 @@ extends Area2D
 
 # Representa o caminho do objeto
 export var nome_objeto = ""
-
 # Representa o objeto
 var objeto
 
@@ -17,7 +16,6 @@ func _ready():
 func _on_Ativador_area_entered(area):
 	
 	if (area.name == "Personagem"):
-		
 		# Inverte o ativo do objeto
 		objeto.ativo = !objeto.ativo
 		

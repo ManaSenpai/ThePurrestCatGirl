@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Cenas/Camera.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/Personagem.tscn" type="PackedScene" id=2]
@@ -16,12 +16,25 @@
 [ext_resource path="res://Cenas/Roteiros/01.gd" type="Script" id=14]
 [ext_resource path="res://Cenas/PlanoDeFundo.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Cenas/MensagemArea.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Cenas/FundoPreto.tscn" type="PackedScene" id=17]
 
 [node name="01" type="Node2D"]
 script = ExtResource( 14 )
 
 [node name="PlanoDeFundo" parent="." instance=ExtResource( 15 )]
-modulate = Color( 0.329412, 0.152941, 0.615686, 1 )
+
+[node name="Fundos" type="Node2D" parent="."]
+
+[node name="FundoPreto" parent="Fundos" instance=ExtResource( 17 )]
+position = Vector2( 448, 576 )
+
+[node name="FundoPreto3" parent="Fundos" instance=ExtResource( 17 )]
+position = Vector2( -63.5, 592.5 )
+scale = Vector2( 5.14516, 1.53226 )
+
+[node name="FundoPreto2" parent="Fundos" instance=ExtResource( 17 )]
+position = Vector2( 96.5, 256.5 )
+scale = Vector2( 4.1129, 3.08065 )
 
 [node name="Inimigo" parent="." instance=ExtResource( 11 )]
 position = Vector2( -320, 448 )

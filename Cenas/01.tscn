@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Cenas/Camera.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/Personagem.tscn" type="PackedScene" id=2]
@@ -15,11 +15,13 @@
 [ext_resource path="res://Cenas/Portal.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Cenas/Roteiros/01.gd" type="Script" id=14]
 [ext_resource path="res://Cenas/PlanoDeFundo.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Cenas/MensagemArea.tscn" type="PackedScene" id=16]
 
 [node name="01" type="Node2D"]
 script = ExtResource( 14 )
 
 [node name="PlanoDeFundo" parent="." instance=ExtResource( 15 )]
+modulate = Color( 0.329412, 0.152941, 0.615686, 1 )
 
 [node name="Inimigo" parent="." instance=ExtResource( 11 )]
 position = Vector2( -320, 448 )
@@ -42,6 +44,9 @@ position = Vector2( 128, 128 )
 
 [node name="Parede4" parent="Paredes" instance=ExtResource( 8 )]
 position = Vector2( 64, 128 )
+
+[node name="Parede5" parent="Paredes" instance=ExtResource( 8 )]
+position = Vector2( 0, 128 )
 
 [node name="Parede31" parent="Paredes" instance=ExtResource( 8 )]
 position = Vector2( 192, 512 )
@@ -133,6 +138,8 @@ position = Vector2( 128, 0 )
 [node name="Parede59" parent="Paredes" instance=ExtResource( 10 )]
 position = Vector2( 64, 0 )
 
+[node name="Parede79" parent="Paredes" instance=ExtResource( 10 )]
+
 [node name="Parede46" parent="Paredes" instance=ExtResource( 10 )]
 position = Vector2( 448, 640 )
 
@@ -172,9 +179,6 @@ position = Vector2( 512, 384 )
 [node name="Parede28" parent="Paredes" instance=ExtResource( 10 )]
 position = Vector2( 576, 384 )
 
-[node name="Parede19" parent="Paredes" instance=ExtResource( 10 )]
-position = Vector2( 608, 192 )
-
 [node name="Parede43" parent="Paredes" instance=ExtResource( 3 )]
 position = Vector2( 512, 576 )
 
@@ -200,7 +204,7 @@ position = Vector2( 256, 640 )
 position = Vector2( 256, 704 )
 
 [node name="Parede22" parent="Paredes" instance=ExtResource( 3 )]
-position = Vector2( 0, 64 )
+position = Vector2( -64, 64 )
 
 [node name="Parede23" parent="Paredes" instance=ExtResource( 3 )]
 position = Vector2( 256, 192 )
@@ -237,13 +241,13 @@ position = Vector2( 512, 640 )
 
 [node name="Personagem" parent="." instance=ExtResource( 2 )]
 light_mask = 524290
-position = Vector2( 64, 64 )
+position = Vector2( 0, 64 )
 tutorial = true
 
 [node name="Cameras" type="Node2D" parent="."]
 
 [node name="Camera" parent="Cameras" instance=ExtResource( 1 )]
-position = Vector2( 192, 128 )
+position = Vector2( 192, 192 )
 inicial = true
 
 [node name="Camera2" parent="Cameras" instance=ExtResource( 1 )]
@@ -256,9 +260,21 @@ position = Vector2( -128, 480 )
 position = Vector2( -256, 448 )
 
 [node name="PosicaoInicial" type="Position2D" parent="."]
-position = Vector2( 64, 64 )
+position = Vector2( 0, 64 )
 
 [node name="Portal" parent="." instance=ExtResource( 13 )]
 position = Vector2( -320, 640 )
 caminho = "res://Cenas/02.tscn"
+
+[node name="MensagemArea" parent="." instance=ExtResource( 16 )]
+position = Vector2( -192, 448 )
+mensagem = "Você pode voltar com o espaço."
+mensagem2 = "Bata nas costas do oponente para matar ele."
+posicao_mensagem = Vector2( 32, 192 )
+vezes = 1
+
+[node name="MensagemArea2" parent="." instance=ExtResource( 16 )]
+position = Vector2( 0, 64 )
+mensagem = "Se movimente usando as setas."
+posicao_mensagem = Vector2( 32, 192 )
 [connection signal="estou_morto" from="Personagem" to="." method="_on_Personagem_estou_morto"]

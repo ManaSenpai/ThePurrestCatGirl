@@ -20,11 +20,9 @@ func _on_Armadilha1_area_entered(area):
 		# ele despausa o inimigo
 		# manda a mensagem e se destroi
 		if (vezes == 0):
-			area.criaMensagem("Mb, esqueci de avisar! Você pode voltar usando o espaço")
 			inimigo.get_node("Timer").paused = false
 			queue_free()
 			
 		# Se for a primeira vez, ele manda a mensagem e diminui uma vez
 		else:
 			vezes  -= 1
-			area.criaMensagem("Você precisa esperar o inimigo virar e bater em suas costas")

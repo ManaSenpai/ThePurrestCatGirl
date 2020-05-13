@@ -25,14 +25,9 @@ export var direcao_inicial = 0
 # Representa se a Sprite está invertida
 export var inverte = false
 
-# Objeto de Mensagens
-export (PackedScene) var Mensagem
 
 func _ready():
 	
-	# Se for um tutorial, crie essa mensagem
-	if (tutorial):
-		criaMensagem("Você pode se movimentar com as setas")
 	
 	# Atribui a direção
 	muda_direcao(direcao_inicial)
@@ -129,22 +124,6 @@ func para():
 func reinicia ():
 	emit_signal("estou_morto")
 
-
-# Função que cria a mensagem
-func criaMensagem(var mensagem):
-	# Instancia o objeto de mensagem
-	var objeto = Mensagem.instance()
-	
-	# Atribui ele como filho
-	add_child(objeto)
-	objeto.get_node("AnimationPlayer").play("Aparece")
-	# Coloca numa posição legal
-	objeto.rect_global_position = position + Vector2(64,-64)
-	
-	# E dá a mensagem que foi passada como parametro nela
-	objeto.text = mensagem
-	
-	
 
 func _on_Personagem_area_entered(area):
 	

@@ -327,10 +327,10 @@ position = Vector2( 320, 832 )
 position = Vector2( 256, 832 )
 
 [node name="PisoFino16" parent="PisosFinos" instance=ExtResource( 8 )]
-position = Vector2( 192, 512 )
+position = Vector2( 192, 576 )
 
 [node name="PisoFino17" parent="PisosFinos" instance=ExtResource( 8 )]
-position = Vector2( 256, 512 )
+position = Vector2( 256, 576 )
 
 [node name="Inimigo" parent="." instance=ExtResource( 11 )]
 position = Vector2( -384, 704 )

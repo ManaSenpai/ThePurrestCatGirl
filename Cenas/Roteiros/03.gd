@@ -10,4 +10,5 @@ func _ready():
 
 # Função que faz o personagem voltar ao começo
 func _on_Personagem_estou_morto():
+	get_tree().change_scene("res://Cenas/03.tscn")
 	p._volta_para_o_comeco()

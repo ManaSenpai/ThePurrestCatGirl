@@ -1,4 +1,7 @@
 extends Area2D
+
+export var wait_time = 1.0
+
 export var alcance = 3
 
 var posicao_inicial = Vector2()
@@ -14,6 +17,7 @@ var player
 
 
 func _ready():
+	$Timer.wait_time = wait_time
 	posicao_inicial = position
 	player = get_parent().get_node("Personagem")	
 	position += direcao.normalized() * q

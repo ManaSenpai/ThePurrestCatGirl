@@ -25,9 +25,10 @@ export var direcao_inicial = 0
 # Representa se a Sprite está invertida
 export var inverte = false
 
+var posicao_inicial = Vector2()
 
 func _ready():
-	
+	posicao_inicial = position
 	
 	# Atribui a direção
 	muda_direcao(direcao_inicial)
@@ -145,5 +146,5 @@ func _on_AnimatedSprite_animation_finished():
 # Função que reinicia o personagem e volta ele para a posição inicial
 func _volta_para_o_comeco():
 	
-	position = get_parent().get_node("PosicaoInicial").position
+	position = posicao_inicial
 	muda_direcao(direcao_inicial)

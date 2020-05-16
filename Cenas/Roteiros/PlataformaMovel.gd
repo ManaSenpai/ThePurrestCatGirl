@@ -25,6 +25,7 @@ func _ready():
 
 
 
+
 func _on_Timer_timeout():
 	var distancia = posicao_inicial.distance_to(position)
 	var vou_mover_player = false

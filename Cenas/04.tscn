@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Cenas/FundoPreto.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/PlanoDeFundo.tscn" type="PackedScene" id=2]
@@ -17,6 +17,8 @@
 [ext_resource path="res://Cenas/Roteiros/04.gd" type="Script" id=15]
 [ext_resource path="res://Cenas/Invocador.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Cenas/Portal.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Cenas/Paredes/Parede.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Cenas/Música.tscn" type="PackedScene" id=19]
 
 [node name="04" type="Node2D"]
 script = ExtResource( 15 )
@@ -210,6 +212,10 @@ scale = Vector2( 2.04839, 4.1129 )
 position = Vector2( 160.25, 704 )
 scale = Vector2( 5.15323, 3.09677 )
 
+[node name="FundoPreto7" parent="Paredes" instance=ExtResource( 1 )]
+position = Vector2( 32, 256 )
+scale = Vector2( 5.15323, 5.16129 )
+
 [node name="FundoPreto4" parent="Paredes" instance=ExtResource( 1 )]
 position = Vector2( -128.125, 896 )
 scale = Vector2( 2.06048, 1.03226 )
@@ -221,6 +227,21 @@ scale = Vector2( 10.3206, 2.06451 )
 [node name="FundoPreto6" parent="Paredes" instance=ExtResource( 1 )]
 position = Vector2( 447.969, 1088 )
 scale = Vector2( 6.19254, 1.03226 )
+
+[node name="Parede" parent="Paredes" instance=ExtResource( 18 )]
+position = Vector2( -96, 576 )
+
+[node name="Parede53" parent="Paredes" instance=ExtResource( 18 )]
+position = Vector2( -96, 768 )
+
+[node name="Parede54" parent="Paredes" instance=ExtResource( 18 )]
+position = Vector2( -96, 896 )
+
+[node name="Parede55" parent="Paredes" instance=ExtResource( 18 )]
+position = Vector2( 32, 896 )
+
+[node name="Parede56" parent="Paredes" instance=ExtResource( 18 )]
+position = Vector2( 608, 1088 )
 
 [node name="Armadilhas" type="Node2D" parent="."]
 
@@ -265,4 +286,6 @@ direcao_inicial = 90
 [node name="Portal" parent="." instance=ExtResource( 17 )]
 position = Vector2( 704, 704 )
 caminho = "res://Cenas/01.tscn"
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource( 19 )]
 [connection signal="estou_morto" from="Personagem" to="." method="_on_Personagem_estou_morto"]

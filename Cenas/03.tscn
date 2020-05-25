@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Cenas/PlanoDeFundo.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Cenas/Paredes/Parede8.tscn" type="PackedScene" id=2]
@@ -17,6 +17,7 @@
 [ext_resource path="res://Cenas/FundoPreto.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Cenas/Inimigo.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Cenas/Portal.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Cenas/Música.tscn" type="PackedScene" id=18]
 
 [node name="03" type="Node2D"]
 script = ExtResource( 13 )
@@ -293,4 +294,6 @@ direcao = Vector2( 0, -1 )
 [node name="Portal" parent="." instance=ExtResource( 17 )]
 position = Vector2( 960, 512 )
 caminho = "res://Cenas/04.tscn"
+
+[node name="AudioStreamPlayer" parent="." instance=ExtResource( 18 )]
 [connection signal="estou_morto" from="Personagem" to="." method="_on_Personagem_estou_morto"]

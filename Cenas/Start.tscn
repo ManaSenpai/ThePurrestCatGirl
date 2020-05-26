@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Cenas/Roteiros/Start.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/Tilesets/2638312.jpg" type="Texture" id=2]
+[ext_resource path="res://Sounds/start.ogg" type="AudioStream" id=3]
+
+[node name="Start" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+modulate = Color( 0.0627451, 0, 0.141176, 1 )
+position = Vector2( 240, 160 )
+scale = Vector2( 0.0797872, 0.0796813 )
+texture = ExtResource( 2 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="CenterContainer"]
+margin_left = 190.0
+margin_top = 150.0
+margin_right = 258.0
+margin_bottom = 170.0
+text = "Começar"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -10.0
+autoplay = true
+[connection signal="pressed" from="CenterContainer/Button" to="." method="_on_Button_pressed"]

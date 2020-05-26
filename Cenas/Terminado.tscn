@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Fontes/IndieFlower-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Cenas/Terminado.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 1 )
+
+[node name="Terminado" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 140.0
+margin_top = 124.0
+margin_right = 307.0
+margin_bottom = 196.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 167.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 1 )
+text = "Você ganhou!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer"]
+margin_top = 52.0
+margin_right = 167.0
+margin_bottom = 72.0
+text = "VOLTAR AO INICIO"
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]

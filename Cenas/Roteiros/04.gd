@@ -1,6 +1,7 @@
 extends Node2D
 # Este script foi criado para a Cena 04,
 
+
 # Esta variavel representa o personagem
 var p
 
